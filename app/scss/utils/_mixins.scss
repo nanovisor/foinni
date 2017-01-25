@@ -1,0 +1,32 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// list reset
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Подсветка элемента
+@mixin hl1 {
+  outline: 1px solid navy;
+}
+
+@mixin hl2 {
+  outline: 1px solid fuchsia;
+}
+
+@mixin hl3 {
+  outline: 1px solid mediumspringgreen;
+}

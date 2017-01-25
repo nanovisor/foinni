@@ -1,0 +1,86 @@
+.header-wrapper {
+  background: #111 url("../img/bg-promo.jpg") no-repeat;
+  background-size: 1600px auto;
+  background-position: center;
+}
+
+.page-header {
+  position: relative;
+  padding: 43px 0 38px;
+  background-color: transparent;
+
+  // thin underline
+  &:after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #4d4c4c;
+  }
+
+  .logo {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 30px;
+
+    a {
+      display: block;
+    }
+  }
+
+  .main-nav {
+    float: right;
+    width: 700px;
+    margin-top: 1px;
+    margin-right: 98px;
+    text-align: right;
+
+    &__list {
+      @include list-reset;
+      font-size: 0;
+    }
+
+    &__item {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 45px;
+
+      &:hover:after {
+        position: absolute;
+        content: "";
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $color-meadow;
+      }
+
+      &--active {
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: "";
+          bottom: -3px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $color-meadow;
+        }
+      }
+    }
+
+    &__link {
+      display: block;
+      @include f-roboto(300);
+      font-size: 14px;
+      color: $color-pearl;
+      line-height: 36px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+}

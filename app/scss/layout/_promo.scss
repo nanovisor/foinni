@@ -1,0 +1,31 @@
+.promo {
+  padding: 0 130px;
+  padding-top: 256px;
+  padding-bottom: 269px;
+  text-align: center;
+  background-color: transparent;
+
+  &__heading {
+    margin: 0;
+    margin-bottom: 37px;
+    @include f-exo(400);
+    font-size: 48px;
+    letter-spacing: 1px;
+    color: $color-pearl;
+
+    > span {
+      color: $color-meadow;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    @include f-roboto(400);
+    font-size: 18px;
+    line-height: 36px;
+    word-spacing: 3px;
+    color: $color-white;
+  }
+}

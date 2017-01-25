@@ -1,0 +1,112 @@
+.price {
+  padding-bottom: 128px;
+
+  &__subheader {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  &__subheader-title {
+    margin: 0;
+    @include f-roboto(600);
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: $color-abbey;
+  }
+
+  &__plans {
+    padding-top: 50px;
+    font-size: 0;
+  }
+}
+
+.price-plan {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 22px;
+  vertical-align: top;
+  width: 268px;
+  margin-right: 18px;
+  text-align: center;
+  outline: 1px solid transparent;
+  transition: outline .3s;
+
+  // every four from first
+  &:nth-child(4n + 1) {
+    margin-left: 23px;
+  }
+
+  &:hover {
+    outline: 1px solid $color-meadow;
+  }
+
+  &:hover .price-plan__name {
+    color: $color-meadow;
+  }
+
+  &:hover .price-plan__price {
+    color: $color-pearl;
+    border-color: $color-meadow;
+    background-color: $color-meadow;
+  }
+
+  &:hover .price-plan__order-btn {
+    color: $color-pearl;
+    border-color: $color-meadow;
+    background-color: $color-meadow;
+  }
+
+  &__name {
+    position: absolute;
+    top: -43px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    @include f-roboto(300);
+    font-size: 14px;
+    color: $color-mist;
+    transition: color .3s;
+  }
+
+  &__price {
+    margin-bottom: 23px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    @include f-roboto-slab(600);
+    font-size: 18px;
+    line-height: 36px;
+    color: $color-abbey;
+    border: 1px solid $color-abbey;
+    transition: color .3s,
+                border-color .3s,
+                background-color .3s;
+  }
+
+  &__cost {
+    position: relative;
+    font-size: 36px;
+  }
+
+  &__currency {
+    position: absolute;
+    left: -16px;
+    top: -5px;
+    font-size: 24px;
+  }
+
+  &__features {
+    margin: 0;
+    margin-bottom: 36px;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+  }
+
+  &__feature {
+    @include f-roboto(300);
+    font-size: 14px;
+    line-height: 36px;
+    color: $color-mist;
+  }
+}

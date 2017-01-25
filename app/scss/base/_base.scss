@@ -1,0 +1,33 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::selection {
+  color: snow;
+  background-color: cyan;
+}
+
+body {
+  min-width: 1190px;
+  @include f-roboto(400);
+  font-size: 18px;
+  line-height: 1;
+  background-color: $color-pearl;
+}
+
+.container {
+  width: 1190px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

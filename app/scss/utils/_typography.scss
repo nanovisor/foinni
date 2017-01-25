@@ -1,0 +1,15 @@
+@mixin f-roboto($weight, $style: normal) {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: $weight;
+  font-style: $style;
+}
+
+@mixin f-roboto-slab($weight) {
+  font-family: 'Roboto Slab', serif;
+  font-weight: $weight;
+}
+
+@mixin f-exo($weight) {
+  font-family: 'Exo', sans-serif;
+  font-weight: $weight;
+}

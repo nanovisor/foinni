@@ -1,0 +1,73 @@
+.contact {
+  padding-top: 32px;
+  padding-bottom: 38px;
+  background: url("../img/bg-contact.jpg") no-repeat;
+  background-position: center top;
+  background-size: 1600px auto;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 20px;
+    @include f-roboto(500);
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-pearl;
+  }
+
+  &__form-wrap {
+    width: 894px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.contact-form {
+
+  input[type=text],
+  input[type=email],
+  textarea {
+    display: block;
+    padding: 6px 20px;
+    width: 100%;
+    @include f-roboto(100, italic);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 36px;
+    color: $color-pearl;
+    border: 1px solid #bbb;
+    background-color: transparent;
+    outline: none;
+
+    &:focus {
+      border-color: $color-meadow;
+    }
+
+    &::placeholder {
+      color: $color-pearl;
+    }
+  }
+
+  input[type=text] {
+    float: left;
+    width: 436px;
+    height: 50px;
+  }
+
+  input[type=email] {
+    float: right;
+    width: 436px;
+    height: 50px;
+  }
+
+  textarea {
+    min-height: 215px;
+    margin-top: 28px;
+    margin-bottom: 30px;
+    padding: 14px 21px;
+    line-height: 22px;
+    resize: vertical;
+  }
+}

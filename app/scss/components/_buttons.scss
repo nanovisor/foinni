@@ -1,0 +1,42 @@
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 7px 60px;
+  @include f-roboto(300);
+  font-size: 18px;
+  line-height: 36px;
+  color: $color-pearl;
+  background-color: $color-meadow;
+  text-decoration: none;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: darken($color-meadow, 10%);
+  }
+
+  &--order {
+    padding: 1px 17px;
+    font-size: 14px;
+    color: $color-abbey;
+    background-color: transparent;
+    border: 1px solid $color-abbey;
+    transition: color .3s,
+                border-color .3s,
+                background-color .3s;
+
+    &:hover {
+      background-color: inherit;
+    }
+  }
+
+  &--contact {
+    padding: 7px 39px;
+  }
+
+  &--subscribe {
+    padding: 0px 13px;
+  }
+}
