@@ -72,12 +72,18 @@
     @media (max-width: 520px) {
       display: block;
       margin-right: 0;
+      transition: none;
 
-      &--active {
+      &:hover {
+        color: $color-meadow;
+      }
 
-        &:after {
-          display: none;
-        }
+      &:hover:after {
+        display: none;
+      }
+
+      &--active:after {
+        display: none;
       }
     }
 
