@@ -21,6 +21,7 @@
     padding: 0;
     list-style: none;
     font-size: 0;
+    text-align: center;
   }
 
   &__item {
@@ -63,6 +64,22 @@
     color: $color-tundora;
     text-decoration: none;
     transition: color .3s;
+
+    @media (max-width: 630px) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: 520px) {
+      display: block;
+      margin-right: 0;
+
+      &--active {
+
+        &:after {
+          display: none;
+        }
+      }
+    }
 
     &:last-child {
       margin-right: 0;

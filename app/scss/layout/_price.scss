@@ -17,6 +17,7 @@
   &__plans {
     padding-top: 50px;
     font-size: 0;
+    text-align: center;
   }
 }
 
@@ -30,6 +31,23 @@
   text-align: center;
   outline: 1px solid transparent;
   transition: outline .3s;
+
+  @media (max-width: 1205px) {
+    margin-left: 10px!important;
+    margin-right: 10px!important;
+    margin-bottom: 80px;
+
+    // 2 last price plans
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 612px) {
+    &:nth-last-child(2) {
+      margin-bottom: 80px;
+    }
+  }
 
   // every four from first
   &:nth-child(4n + 1) {

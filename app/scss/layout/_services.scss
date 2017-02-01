@@ -6,6 +6,16 @@
     padding: 0 130px;
     text-align: center;
     word-spacing: 2px;
+
+    @media (max-width: 900px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    @media (max-width: 480px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__subheader-title {
@@ -32,6 +42,7 @@
   &__items {
     @include list-reset;
     font-size: 0;
+    text-align: center;
   }
 }
 
@@ -49,6 +60,17 @@
   border: 1px solid #cac8c5;
   outline: 1px solid transparent;
   transition: border-color .3s, outline .3s;
+
+  @media (max-width: 1206px) {
+    &:nth-child(2n) {
+      margin-right: 0!important;
+    }
+  }
+
+  @media (max-width: 800px) {
+    width: auto;
+    margin-right: 0;
+  }
 
   &:hover {
     border-color: $color-meadow;
@@ -69,6 +91,14 @@
 
   &:nth-child(3n) {
     margin-right: 0;
+
+    @media (max-width: 1206px) {
+      margin-right: 48px;
+    }
+
+    @media (max-width: 800px) {
+      margin-right: 0;
+    }
   }
 
   &__icon {

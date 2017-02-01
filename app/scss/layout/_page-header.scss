@@ -1,6 +1,6 @@
 .header-wrapper {
   background: #111 url("../img/bg-promo.jpg") no-repeat;
-  background-size: 1600px auto;
+  background-size: cover;
   background-position: center;
 }
 
@@ -35,6 +35,14 @@
     margin-top: 1px;
     margin-right: 98px;
     text-align: right;
+
+    @media (max-width: 1020px) {
+      margin-right: 30px;
+    }
+
+    @media (max-width: 950px) {
+      display: none; //
+    }
 
     &__list {
       @include list-reset;

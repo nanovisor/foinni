@@ -7,6 +7,7 @@
     @include f-roboto(300);
     font-size: 14px;
     line-height: 30px;
+    text-align: center; ///
     background-color: $color-cod-gray;
   }
 
@@ -14,11 +15,36 @@
     float: left;
     width: 320px;
     margin-right: 40px;
+    text-align: left;
+
+    @media (max-width: 1100px) {
+      float: none;
+      display: inline-block;
+      margin-bottom: 30px;
+      vertical-align: top;
+    }
+
+    @media (max-width: 900px) {
+      width: 90%!important;
+      margin-right: 0!important;
+    }
 
     // about us
     &:first-child {
       margin-left: 31px;
       margin-right: 120px;
+
+      @media (max-width: 1100px) {
+        margin-left: 0;
+        margin-right: 30px;
+      }
+    }
+
+    // quick links
+    &:nth-child(2) {
+      @media (max-width: 1100px) {
+        margin-right: 30px;
+      }
     }
 
     // find us on
@@ -26,6 +52,10 @@
       width: 250px;
       margin-left: 119px;
       margin-right: 0;
+
+      @media (max-width: 1100px) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -70,14 +100,28 @@
 
     &:first-child {
       float: left;
+
+      @media (max-width: 900px) {
+        float: none;
+      }
     }
 
     &:last-child {
       float: right;
+
+      @media (max-width: 900px) {
+        float: none;
+      }
     }
   }
 
   &__list-item {
+
+    @media (max-width: 900px) {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+    }
 
     > a {
       display: block;
@@ -156,6 +200,10 @@
     color: $color-mist;
     border: 1px solid $color-mist;
     background-color: transparent;
+
+    @media (max-width: 900px) {
+      max-width: 250px;
+    }
 
     &:focus {
       border-color: $color-meadow;
